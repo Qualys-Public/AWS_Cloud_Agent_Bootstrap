@@ -81,11 +81,11 @@ Resources:
                       DocumentName='QualysCloudAgent-Install',
                       TimeoutSeconds=900,
                       Parameters={
-                          'ActivationID': os.environ['ActivationID'],
-                          'CustomerID': os.environ['CustomerID'],
-                          'AgentLocationWindows': os.environ['AgentLocationWindows'] ,
-                          'AgentLocationDebian': os.environ['AgentLocationDebian'] ,
-                          'AgentLocationRPM': os.environ['AgentLocationRPM'] ,
+                          'ActivationID': [os.environ['ActivationID']],
+                          'CustomerID': [os.environ['CustomerID']],
+                          'AgentLocationWindows': [os.environ['AgentLocationWindows']] ,
+                          'AgentLocationDebian': [os.environ['AgentLocationDebian']] ,
+                          'AgentLocationRPM': [os.environ['AgentLocationRPM']] ,
                           'LogLevel': ['5']
                       }
                   )
