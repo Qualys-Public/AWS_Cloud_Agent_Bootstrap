@@ -14,17 +14,25 @@ This tutorial makes use of following services:
 we start by creating a Rule that invokes an AWS Lambda function when any instance enters the “Running” state. The Lambda function will trigger Run Command on the instance with commands to install QCA.
 
 # Prerequisites:
+
 1.	EC2 instance has the SSM Agent installed and has an IAM role that allows Run Command. For more information:
+
 	Installing and Configuring SSM Agent 
+http://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
+
 	Configuring Security Roles for System Manager 
+http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html
 
 # Steps for deployment:
 
 Lambda:
 1.	Create a Lambda function named Invoke-QCA and copy the contents from the file. It does following tasks:
+
 i)	Checks Whether the SSM agent is installed on the instance and has the instance assigned instance profile for SSM to run.
+
 ii)	Builds the commands and send it to Run command via an API. It populates the parameters ie ActivationID, CustomerID, AgentLocationWindows, AgentLocationDebian, AgentLocationRPM. 
 Agents will be stored at S3 Bucket. Note: don’t FORGET to change the Input parameters titled “REPLACE_ME”.
+
 ![Image](parameters.png?raw=true)
 
 
