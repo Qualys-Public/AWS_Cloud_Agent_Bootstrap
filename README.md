@@ -25,20 +25,20 @@ http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-acce
 
 # Steps for deployment:
 
-Lambda:
-1.	Create a Lambda function named Invoke-QCA and copy the contents from the file. It does following tasks:
+# Lambda:
+ 1.	Create a Lambda function named Invoke-QCA and copy the contents from the file. It does following tasks:
 
-i)	Checks Whether the SSM agent is installed on the instance and has the instance assigned instance profile for SSM to run.
+  i)	Checks Whether the SSM agent is installed on the instance and has the instance assigned instance profile for SSM to run.
 
-ii)	Builds the commands and send it to Run command via an API. It populates the parameters ie ActivationID, CustomerID, AgentLocationWindows, AgentLocationDebian, AgentLocationRPM. 
+  ii)	Builds the commands and send it to Run command via an API. It populates the parameters ie ActivationID, CustomerID, AgentLocationWindows, AgentLocationDebian, AgentLocationRPM. 
 Agents will be stored at S3 Bucket. Note: don’t FORGET to change the Input parameters titled “REPLACE_ME”.
 
 ![Image](parameters.png?raw=true)
 
 
-CloudWatch:
+# CloudWatch:
 
-2.	Create a Rule in CloudWatch Events matching the event pattern that describes an instance’s state change to “running”. This can be done while creating a rule with Event Pattern and selecting Service Name as EC2 and Event Type as EC2 Instance State-change Notification as shown in the diagram. Select Specific state(s) and select running. Select the previously created Lambda function as your target.
+ 2.	Create a Rule in CloudWatch Events matching the event pattern that describes an instance’s state change to “running”. This can be done while creating a rule with Event Pattern and selecting Service Name as EC2 and Event Type as EC2 Instance State-change Notification as shown in the diagram. Select Specific state(s) and select running. Select the previously created Lambda function as your target.
 
 ![eventsources](eventsources.png?raw=true "eventsources")
 
