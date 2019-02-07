@@ -1,5 +1,5 @@
 # deploy_qualys_bootstap_AWS
-(Based on GARLC https://github.com/awslabs/lambda-runcommand-configuration-management)
+(Based on [GARLC](https://github.com/awslabs/lambda-runcommand-configuration-management)
 
 # License
 _**THIS SCRIPT IS PROVIDED TO YOU "AS IS."  TO THE EXTENT PERMITTED BY LAW, QUALYS HEREBY DISCLAIMS ALL WARRANTIES AND LIABILITY FOR THE PROVISION OR USE OF THIS SCRIPT.  IN NO EVENT SHALL THESE SCRIPTS BE DEEMED TO BE CLOUD SERVICES AS PROVIDED BY QUALYS**_
@@ -17,7 +17,7 @@ we start by creating a Rule that invokes an AWS Lambda function when any instanc
 
 ## Prerequisites:
 
-1.	EC2 instance has the SSM Agent installed and has an IAM role that allows Run Command. For more information:
+**EC2 instance has the SSM Agent installed and has an IAM role that allows Run Command. For more information:**
 
 * [Installing and Configuring SSM Agent](http://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html)
 
