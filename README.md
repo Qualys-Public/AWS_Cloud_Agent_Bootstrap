@@ -19,11 +19,9 @@ we start by creating a Rule that invokes an AWS Lambda function when any instanc
 
 1.	EC2 instance has the SSM Agent installed and has an IAM role that allows Run Command. For more information:
 
-	Installing and Configuring SSM Agent 
-http://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html
+* [Installing and Configuring SSM Agent](http://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html)
 
-	Configuring Security Roles for System Manager 
-http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html
+* [Configuring Security Roles for System Manager](http://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-access.html)
 
 # Deployment:
 
