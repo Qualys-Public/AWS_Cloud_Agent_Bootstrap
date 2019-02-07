@@ -28,9 +28,9 @@ we start by creating a Rule that invokes an AWS Lambda function when any instanc
 ## Lambda:
  1.	Create a Lambda function named Invoke-QCA and copy the contents from the file. It does following tasks:
 
-  i)	Checks Whether the SSM agent is installed on the instance and has the instance assigned instance profile for SSM to run.
+* Checks Whether the SSM agent is installed on the instance and has the instance assigned instance profile for SSM to run.
 
-  ii)	Builds the commands and send it to Run command via an API. It populates the parameters ie ActivationID, CustomerID, AgentLocationWindows, AgentLocationDebian, AgentLocationRPM. 
+* Builds the commands and send it to Run command via an API. It populates the parameters ie ActivationID, CustomerID, AgentLocationWindows, AgentLocationDebian, AgentLocationRPM. 
 Agents will be stored at S3 Bucket. Note: don’t FORGET to change the Input parameters titled “REPLACE_ME”.
 
 ![Image](parameters.png?raw=true)
