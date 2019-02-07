@@ -5,7 +5,7 @@
 _**THIS SCRIPT IS PROVIDED TO YOU "AS IS."  TO THE EXTENT PERMITTED BY LAW, QUALYS HEREBY DISCLAIMS ALL WARRANTIES AND LIABILITY FOR THE PROVISION OR USE OF THIS SCRIPT.  IN NO EVENT SHALL THESE SCRIPTS BE DEEMED TO BE CLOUD SERVICES AS PROVIDED BY QUALYS**_
 
 # Usage:
-Taking an inspiration from GARLC, we have built this tutorial to help you achieve a state where all your newly launched instances will have QCA installed.
+Taking an inspiration from GARLC, we have built this tutorial to help you achieve a state where all your newly launched instances will have Qualys Cloud Agent(CA) installed.
 This tutorial makes use of following services:
 1.	AWS Lambda
 2.	Amazon EC2 Run Command
@@ -13,11 +13,11 @@ This tutorial makes use of following services:
 4.	S3 Bucket
 
 ## Logic: 
-we start by creating a Rule that invokes an AWS Lambda function when any instance enters the “Running” state. The Lambda function will trigger Run Command on the instance with commands to install QCA.
+We start by creating a Rule that invokes an AWS Lambda function when any instance enters the “Running” state. The Lambda function will trigger the Run command on the instance to install Qualys Cloud Agent(CA).
 
 ## Prerequisites:
 
-**EC2 instance has the SSM Agent installed and has an IAM role that allows Run Command. For more information:**
+**EC2 instance has the AWS Systems Manager Agent (SSM agent) installed and has an IAM role that allows Run Command. For more information, refer to the following links:**
 
 * [Installing and Configuring SSM Agent](http://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html)
 
@@ -26,12 +26,13 @@ we start by creating a Rule that invokes an AWS Lambda function when any instanc
 # Deployment:
 
 ## Lambda:
- 1.	Create a Lambda function named Invoke-QCA and copy the contents from the file. It does following tasks:
+ 1.	Create a Lambda function named Invoke-QCA and copy the contents from the file. It performs the following tasks:
 
-* Checks Whether the SSM agent is installed on the instance and has the instance assigned instance profile for SSM to run.
+* Checks whether the AWS Systems Manager Agent (SSM agent) is installed on the instance and has the instance assigned instance profile for SSM to run.
 
-* Builds the commands and send it to Run command via an API. It populates the parameters ie ActivationID, CustomerID, AgentLocationWindows, AgentLocationDebian, AgentLocationRPM. 
-Agents will be stored at S3 Bucket. Note: don’t FORGET to change the Input parameters titled “REPLACE_ME”.
+* Builds the commands and send it to Run command via an API. It populates the parameters: _ActivationID, CustomerID, AgentLocationWindows, AgentLocationDebian, AgentLocationRPM_. 
+Agents will be stored at S3 Bucket. 
+**Note: Ensure that you insert the apt Input parameters titled _“REPLACE_ME”_.**
 
 ![Image](parameters.png?raw=true)
 
