@@ -17,7 +17,7 @@ We start by creating a Rule that invokes an AWS Lambda function when any instanc
 
 #### Prerequisites:
 
-**EC2 instance has the AWS Systems Manager Agent (SSM agent) installed and has an IAM role that allows Run Command. For more information, refer to the following links:**
+EC2 instance has the AWS Systems Manager Agent (SSM agent) installed and has an IAM role that allows Run Command. For more information, refer to the following links:
 
 * [Installing and Configuring SSM Agent](http://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html)
 
