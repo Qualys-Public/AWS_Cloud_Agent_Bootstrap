@@ -32,6 +32,7 @@ We start by creating a Rule that invokes an AWS Lambda function when any instanc
 
 * Builds the commands and send it to Run command via an API. It populates the parameters: _ActivationID, CustomerID, AgentLocationWindows, AgentLocationDebian, AgentLocationRPM_. 
 Agents will be stored at S3 Bucket. 
+
 **_Note: Ensure that you insert the apt Input parameters titled _“REPLACE_ME”_._**
 
 ![Image](parameters.png?raw=true)
