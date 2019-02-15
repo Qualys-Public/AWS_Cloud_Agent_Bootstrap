@@ -7,10 +7,10 @@ _**THIS SCRIPT IS PROVIDED TO YOU "AS IS."  TO THE EXTENT PERMITTED BY LAW, QUAL
 ## Description
 Taking an inspiration from GARLC, we have built this tutorial to help you achieve a state where all your newly launched instances will have Qualys Cloud Agent(CA) installed.
 This tutorial makes use of following services:
-1.	AWS Lambda
-2.	Amazon EC2 Run Command
-3.	CloudWatch Events
-4.	S3 Bucket
+*	AWS Lambda
+*	Amazon EC2 Run Command
+*	CloudWatch Events
+*	S3 Bucket
 
 #### Logic: 
 We start by creating a Rule that invokes an AWS Lambda function when any instance enters the “Running” state. The Lambda function will trigger the Run command on the instance to install Qualys Cloud Agent(CA).
