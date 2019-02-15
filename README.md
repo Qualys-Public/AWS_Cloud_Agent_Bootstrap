@@ -1,4 +1,4 @@
-# deploy_qualys_bootstap_AWS
+# AWS_Cloud_Agent_Bootstrap
 (Based on [GARLC](https://github.com/awslabs/lambda-runcommand-configuration-management))
 
 # License
