@@ -44,7 +44,7 @@ Agents will be stored at S3 Bucket.
 
 ![eventsources|100x100,30%](eventsources.png?raw=true "eventsources")
 
-![eventfilters](eventfilters.png?raw=true "eventfilters")
+![eventfilters|100x100,30%](eventfilters.png?raw=true "eventfilters")
 
 ![eventtargets |100x100,30%](eventtargets.png?raw=true "eventtargets")
 
