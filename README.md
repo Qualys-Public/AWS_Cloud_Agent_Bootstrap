@@ -41,13 +41,13 @@ Agents will be stored at S3 Bucket.
 ## CloudWatch:
 
  2.	Create a Rule in CloudWatch Events matching the event pattern that describes an instance’s state change to “running”. This can be done while creating a rule with Event Pattern and selecting Service Name as EC2 and Event Type as EC2 Instance State-change Notification as shown in the diagram. Select Specific state(s) and select running. Select the previously created Lambda function as your target.
-
+<p align="center">
 ![eventsources|100x100,30%](eventsources.png?raw=true "eventsources")
 
 ![eventfilters|100x100,30%](eventfilters.png?raw=true "eventfilters")
 
 ![eventtargets |100x100,30%](eventtargets.png?raw=true "eventtargets")
-
+</p>
 
 **NOTE: The cloudformation template named "Bootstrap.yml" is uploaded in the same folder and can be used to deploy this setup.**
 
