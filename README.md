@@ -46,7 +46,7 @@ Agents will be stored at S3 Bucket.
 
 ![eventfilters](eventfilters.png?raw=true "eventfilters")
 
-![eventtargets](eventtargets.png =250x250 ?raw=true "eventtargets")
+![eventtargets](eventtargets.png?raw=true "eventtargets") {:height="50%" width="50%"}
 
 
 **NOTE: The cloudformation template named "Bootstrap.yml" is uploaded in the same folder and can be used to deploy this setup.**
