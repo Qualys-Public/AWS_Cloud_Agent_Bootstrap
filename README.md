@@ -35,8 +35,11 @@ Agents will be stored at S3 Bucket.
 
 **_Note: Ensure that you insert the apt Input parameters titled _“REPLACE_ME”_._**
 
+<p align="center">
+ 
 ![Image](parameters.png?raw=true)
 
+</p>
 
 ## CloudWatch:
 
